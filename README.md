@@ -1,4 +1,4 @@
-##1.	What are interfaces and abstract classes? And what are the differences between them? 
+## 1.	What are interfaces and abstract classes? And what are the differences between them? 
 
 Абстрактный класс – класс, который может иметь как обычные, так и абстрактные методы (без реализации). 
 У него отсутствует конструктор и (как следствие) невозможно создать экземпляр. 
@@ -8,68 +8,68 @@
 Интерфейс/класс может наследовать от любого кол-ва интерфейсов.
 Класс может наследовать только от одного абстрактного класса. 
 
-##2.	What is the GAC, and where is it located? 
+## 2.	What is the GAC, and where is it located? 
 
 GAC – (Global Assembly Cache) место, где хранятся совместно используемые сборки.
 По умолчанию находится в каталоге  %windir%\Microsoft.NET\assembly
 
-##3.	What is the difference between the following terms: Public, and static? 
+## 3.	What is the difference between the following terms: Public, and static? 
 
 Public – модификатор доступа (видимость в других проектах/классах), static – модификатор типа (доступен ли метод/класс/поле без создания экземпляра класса).
 
-##4.	What is the difference between a value type and reference type? 
+## 4.	What is the difference between a value type and reference type? 
 
 Значимые типы хранят само значение переменной (в стеке потока)
 Ссылочные – адрес, где хранится значение. При объявлении в «куче» выделяется память для объекта. 
 Если заменить ссылку такой переменной (допустим, на другой объект), то со временем сборщик мусора удалит выделенную память. 
 
-##5.	What are the differences between ref and out parameters?
+## 5.	What are the differences between ref and out parameters?
 
 Мы обязаны поменять/присвоить значение переменной, переданной с помощью out.
 
-##6.	What is Asynchronous Method?
+## 6.	What is Asynchronous Method?
 
 Асинхронные методы могут выполняться параллельно с другими процессами. 
 
-##7.	What is the difference between is and as keyword ?
+## 7.	What is the difference between is and as keyword ?
 
 Пример. 
 (somth is TYPE) – возвращает true или false, в зависимости от типа класса.
 var somthOfTYPE = somth as TYPE  - приведёт к типу TYPE или вернёт null
 
-##8.	The data members of a class by default are?
-*a) protected, public 
-*b) private, public 
-*c) private 
-*d) public 
+## 8.	The data members of a class by default are?
+* a) protected, public 
+* b) private, public 
+* c) private 
+* d) public 
 
 С
 
-##9.	How are methods overloaded?
+## 9.	How are methods overloaded?
 
 Методы перегружаются при изменении:
-*a.	Кол-ва параметров.
-*b.	Типа параметров (кроме модификаторов ref/out).
-*c.	Порядка параметров.
+* a.	Кол-ва параметров.
+* b.	Типа параметров (кроме модификаторов ref/out).
+* c.	Порядка параметров.
 
-##10.	What is the difference between a struct and a class? 
+## 10.	What is the difference between a struct and a class? 
 
 Структуры: значимый тип, они не могут наследовать и быть абстрактными, невозможно инициализировать переменные в место объявления. 
 Классы: ссылочный тип, могут наследовать, быть абстрактными, могут содержать значение по умолчанию для переменных. 
 
-##11.	Can you return multiple values from a function in C#?
+## 11.	Can you return multiple values from a function in C#?
 
 Да. Есть 3 способа:
-*a.	Возвращать класс/структуру с необходимыми полями.
-*b.	Возвращать кортеж Tuple<>/ValueTuple.
-*c.	Использовать out/ref параметры.
+* a.	Возвращать класс/структуру с необходимыми полями.
+* b.	Возвращать кортеж Tuple<>/ValueTuple.
+* c.	Использовать out/ref параметры.
 
-##12.	What is delegates in C# and uses of delegates? 
+## 12.	What is delegates in C# and uses of delegates? 
 
 Делегаты используются для указания на методы. 
 В зависимости от задачи делегатам можно присваивать разные методы и/или хранить список методов для вызова или передачи в качестве параметра. 
 
-##13.	What does a generic class mean?
+## 13.	What does a generic class mean?
 
 Позволяет создавать универсальные классы и методы, которые могут работать с несколькими типами.
 Например, объявление подобного списка выглядит так:
@@ -85,15 +85,15 @@ var generic = new Generic<int>();
 
 При непосредственной работе с экземпляром такого класса тип T заменится на используемый.
 
-##14.	What is a singleton?
+## 14.	What is a singleton?
 
 Синглтон – паттерн, использование которого гарантирует, что определённый класс будет создан только в одном экземпляре. 
 
-##15.	What Is Deferred Loading(lazy Loading)?
+## 15.	What Is Deferred Loading(lazy Loading)?
 
 «Подгрузка» объектов, связанных с уже полученными объектами только при первом обращении к ним. 
 
-##16.	How Can You Enhance The Performance Of Entity Framework?
+## 16.	How Can You Enhance The Performance Of Entity Framework?
 
 Ответ был дан в документе, здесь нечем дополнить.
 
@@ -102,19 +102,19 @@ var generic = new Generic<int>();
 Finalize вызывается сборщиком мусора, когда нужно очистить выделенную память (например, после удаления ссылки на него).
 Dispose – «пользовательский» метод, вызывается из кода программы при необходимости.
 
-##18.	What is the difference between services.AddTransient and service.AddScope methods are Asp.Net Core?
+## 18.	What is the difference between services.AddTransient and service.AddScope methods are Asp.Net Core?
 
 services.AddTransient – если в течение запросы было несколько обращений к сервису, то при каждом будет создаваться новый объект.
 service.AddScope - если в течение запросы было несколько обращений к сервису, то при каждом будет использоваться один объект сервиса.
 
-##19.	Explain briefly CORS(Cross-Origin Resource Sharing)?
+## 19.	Explain briefly CORS(Cross-Origin Resource Sharing)?
 Механизм, который позволяет приложению отправлять/принимать запросы на внешние разрешённые источники. 
 Используется, если нужно согласовывать клиентские данные с другими API.
 
-##20.	Could you clarify what is the best practice with Web API error management?
-*a.	Возвращать утверждённый код ошибки (400, 401, 403, 404…)
-*b.	Обрабатывать исключения в методах и возвращать описание ошибки 
-*c.	Стандартизировать возвращаемые ошибки, чтобы они имели схожую структуру. 
+## 20.	Could you clarify what is the best practice with Web API error management?
+* a.	Возвращать утверждённый код ошибки (400, 401, 403, 404…)
+* b.	Обрабатывать исключения в методах и возвращать описание ошибки 
+* c.	Стандартизировать возвращаемые ошибки, чтобы они имели схожую структуру. 
 
 
 *** Отвечать можно на Русском или Английском. 
