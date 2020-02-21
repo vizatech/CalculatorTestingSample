@@ -1,4 +1,4 @@
-##1.	What are interfaces and abstract classes? And what are the differences between them? 
+##1.	What are interfaces and abstract classes? And what are the differences between them?## 
 
 Абстрактный класс – класс, который может иметь как обычные, так и абстрактные методы (без реализации). 
 У него отсутствует конструктор и (как следствие) невозможно создать экземпляр. 
