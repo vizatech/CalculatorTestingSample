@@ -9,5 +9,7 @@ namespace back_dotnetcore_rest_api.Services
         Task<IEnumerable<UserAction>> ListAsync();
 
         Task<int> NumberOfActions();
+        
+        Task<SaveResponse> SaveAsync(UserAction action);
     }
 }

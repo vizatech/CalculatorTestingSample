@@ -7,5 +7,7 @@ namespace back_dotnetcore_rest_api.Repositories
     public interface IUserActionRepo 
     {
         Task<IEnumerable<UserAction>> ListAsyncRepo();
+
+        Task AddAsync(UserAction action);
     }
 }

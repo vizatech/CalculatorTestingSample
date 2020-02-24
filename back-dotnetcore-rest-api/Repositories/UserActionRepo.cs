@@ -17,5 +17,10 @@ namespace back_dotnetcore_rest_api.Repositories
         {
             return await _context.ActionsOfUser.ToListAsync();
         }
+
+        public async Task AddAsync(UserAction action)
+        {
+            await _context.ActionsOfUser.AddAsync(action);
+        }
     }
 }

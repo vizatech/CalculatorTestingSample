@@ -48,3 +48,5 @@ C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\obj\Debug\
 C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\obj\Debug\netcoreapp3.1\back-dotnetcore-rest-api.csproj.CopyComplete
 C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\obj\Debug\netcoreapp3.1\back-dotnetcore-rest-api.dll
 C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\obj\Debug\netcoreapp3.1\back-dotnetcore-rest-api.pdb
+C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\dmitr\Documents\Projects\Calculator\back-dotnetcore-rest-api\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,6 +8,8 @@ using Microsoft.EntityFrameworkCore;
 using back_dotnetcore_rest_api.Services;
 using back_dotnetcore_rest_api.Repositories;
 using back_dotnetcore_rest_api.Persistence;
+using back_dotnetcore_rest_api.Mapping;
+using back_dotnetcore_rest_api.Resources;
 
 namespace back_dotnetcore_rest_api
 {
@@ -39,6 +36,9 @@ namespace back_dotnetcore_rest_api
 
             services.AddScoped<IUserActionService, UserActionService>();
             services.AddScoped<IUserActionRepo, UserActionRepo>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddAutoMapper( typeof(Startup) );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
