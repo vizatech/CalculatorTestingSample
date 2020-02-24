@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj": {}
+    "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj": {
+    "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj",
+        "projectUniqueName": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj",
         "projectName": "back-dotnetcore-rest-api",
-        "projectPath": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj",
+        "projectPath": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api.csproj",
         "packagesPath": "C:\\Users\\dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\back-dotnetcore-rest-api\\obj\\",
+        "outputPath": "C:\\Users\\dmitr\\Documents\\Projects\\Calculator\\back-dotnetcore-rest-api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,16 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

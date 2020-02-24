@@ -9,7 +9,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using back_dotnetcore_rest_api.Services;
+using back_dotnetcore_rest_api.Repositories;
+using back_dotnetcore_rest_api.Persistence;
 
 namespace back_dotnetcore_rest_api
 {
@@ -26,6 +29,16 @@ namespace back_dotnetcore_rest_api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<CalculatorDBContext>(
+                options =>
+                {
+                    options.UseInMemoryDatabase("CalculatorDB");
+                }
+            );
+
+            services.AddScoped<IUserActionService, UserActionService>();
+            services.AddScoped<IUserActionRepo, UserActionRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -34,6 +47,8 @@ namespace back_dotnetcore_rest_api
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            } else {
+                app.UseHsts();
             }
 
             app.UseHttpsRedirection();
